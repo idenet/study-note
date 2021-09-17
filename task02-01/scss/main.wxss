@@ -1,0 +1,6 @@
+body {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f7f6;
+  color: #f6f5f4;
+}
