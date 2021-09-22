@@ -36,3 +36,14 @@
 4. webpack-dev-server
 
 ### HMR热更新
+
+1. vue -- vue-loader  vue-template-compile
+
+
+### output
+- publicPath: index.html内部的引用路径
+- 域名 public + file
+
+### devserver
+- publicPath: 指定本地服务所在的目录
+- contentBase: 我们打包之后的资源如果说依赖其他资源，此时告诉他去哪里找
