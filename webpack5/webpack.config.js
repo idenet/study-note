@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const htmlwebpackPlugin = require('html-webpack-plugin')
 const { DefinePlugin } = require('webpack')
 const copyWebpackPlugin = require('copy-webpack-plugin')
+const vueLoaderPlugin= require('vue-loader/dist/plugin')
 
 module.exports = {
   mode: 'development',
@@ -123,6 +124,7 @@ module.exports = {
         },
       ],
     }),
+    new vueLoaderPlugin()
   ],
 }
 

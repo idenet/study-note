@@ -1,7 +1,7 @@
+import('./title')
 
-
-import './js/Font'
-import './js/Img'
+// import './js/Font'
+// import './js/Img'
 
 
 // import { sum, square } from './js/utils'

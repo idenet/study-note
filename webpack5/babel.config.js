@@ -1,5 +1,5 @@
-module.exports = {
-  presets: [[
+const presets = [
+  [
     '@babel/preset-env',
     {
       // false 不对当前的js处理做polyfill的填充
@@ -8,5 +8,20 @@ module.exports = {
       useBuiltIns: 'usage',
       corejs: 3
     }
-  ]],
+  ]
+]
+
+const plugins = []
+
+// 依据打包模式来决定plugin的值
+
+const isProdctuino = process.env.NOFE_ENV  === 'prodction'
+
+if (!isProdctuino) {
+  // plugins.push(['react-refresh/babel'])
+}
+
+module.exports = {
+  presets,
+  plugins
 }

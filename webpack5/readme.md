@@ -47,3 +47,20 @@
 ### devserver
 - publicPath: 指定本地服务所在的目录
 - contentBase: 我们打包之后的资源如果说依赖其他资源，此时告诉他去哪里找
+
+## 优化
+
+### dll
+
+1. 打包
+2. 引入
+
+### 单独提取css
+
+### 将文件中的函数包裹在一个作用域中
+
+### tree shaking
+- 不让未使用的代码打包到dist目录，建议使用esmodule
+1. usedExports
+2. sideEffect
+
