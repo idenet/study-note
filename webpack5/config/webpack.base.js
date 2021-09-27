@@ -69,6 +69,7 @@ const baseConfig = (isProduction) => {
             },
             'postcss-loader',
           ],
+          sideEffects: true,
         },
         {
           test: /\.less$/,
@@ -106,6 +107,12 @@ const baseConfig = (isProduction) => {
           test: /\.js$/,
           exclude: /node_modules/,
           use: ['babel-loader'],
+        },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: ['eslint-loader'],
+          enforce: 'pre'
         },
         // {
         //   test: /\.vue$/,

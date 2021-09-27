@@ -9,7 +9,8 @@
     "serve": "webpack serve",
     "build2": "webpack --config ./config/webpack.base.js --env production",
     "serve2": "webpack serve --config ./config/webpack.base.js --env development",
-    "ck": "tsc noEmit"
+    "ck": "tsc noEmit",
+    "precommit": "lint-staged"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +33,7 @@
     "postcss": "^8.3.6",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
     "regenerator-runtime": "^0.13.9",
     "style-loader": "^3.2.1",
     "ts-loader": "^9.2.6",
@@ -41,5 +43,20 @@
     "webpack": "^5.47.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^4.2.1"
+  },
+  "dependencies": {
+    "husky": "^7.0.2",
+    "inline-chunk-html-plugin": "^1.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  },
+  "lint-staged": {
+    "*.js":[
+      "eslint",
+      "git add"
+    ]
   }
 }

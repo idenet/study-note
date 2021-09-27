@@ -64,3 +64,9 @@
 1. usedExports
 2. sideEffect
 
+### tree shaking css
+
+
+### githooks 介绍
+1. git hook 每个钩子对应一个任务
+2. 通过shell脚本可以编写钩子的任务触发时要具体执行的操作
